@@ -1,0 +1,20 @@
+[
+  {
+    "name": "George",
+    "price": 9.99,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Female_Jumping_Spider_-_Phidippus_regius_-_Florida.jpg",
+    "description": "George is adorable, let’s face it."
+  },
+  {
+    "name": "Barb",
+    "price": 19.99,
+    "image": "https://c1.staticflickr.com/3/2421/3822942380_53907aedf5_b.jpg",
+    "description": "Barbara is a troublemaker…"
+  },
+  {
+    "name": "Norm",
+    "price": 9.99,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Habronattus_coecatus_Kaldari_01.jpg",
+    "description": "Norm hangs around the bar a lot."
+  }
+]

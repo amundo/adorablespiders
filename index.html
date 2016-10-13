@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Adorable Spiders Unlimited</title>
+  <style>
+  img {
+    width: 200px;
+  }
+  </style>
+</head>
+<body>
+  
+<header>
+  <h1>Adorable Spiders Unlimited</h1>
+</header>
+
+<main>
+  <section id="spiders">
+  </section>
+</main>
+
+<script>
+let template = spider => `
+  <div class=spider>
+    <h2>${spider.name}</h2>
+    <h3>${spider.price}</h3>
+    <img src="${spider.image}"></h3>
+    <p>${spider.description}</p>
+  </div>
+`
+
+let renderSpider = (spider, mount) => {
+  mount.insertAdjacentHTML('beforeend', template(spider))
+}
+
+let renderSpiders = spiders => {
+  let spiderSection = document.querySelector('#spiders'); 
+
+  spiders.forEach(spider => renderSpider(spider, spiderSection) );
+}
+
+fetch("spider-data.json")
+  .then(response => response.json())
+  .then(spiders => renderSpiders(spiders))
+  .catch(error => console.log(error))
+
+</script>
+
+</body>
+</html>
