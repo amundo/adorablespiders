@@ -3,11 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Adorable Spiders Unlimited</title>
-  <style>
-  img {
-    width: 200px;
-  }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   
@@ -19,25 +15,27 @@
   <section id="spiders">
   </section>
 </main>
-
 <script>
-let template = spider => `
-  <div class=spider>
-    <h2>${spider.name}</h2>
-    <h3>${spider.price}</h3>
-    <img src="${spider.image}"></h3>
-    <p>${spider.description}</p>
-  </div>
-`
+let renderSpider = spider => `
+  <article class=spider>
+    <figure>
+      <img src="${spider.image}"></h3>
+    </figure>
 
-let renderSpider = (spider, mount) => {
-  mount.insertAdjacentHTML('beforeend', template(spider))
-}
+    <div>
+      <h2>${spider.name}</h2>
+      <h3>$${spider.price}</h3>
+      <p>${spider.description}</p>
+    </div>
+  </article>
+`
 
 let renderSpiders = spiders => {
   let spiderSection = document.querySelector('#spiders'); 
 
-  spiders.forEach(spider => renderSpider(spider, spiderSection) );
+  spiders.forEach(spider => {
+    spiderSection.insertAdjacentHTML("beforeend", renderSpider(spider));
+  })
 }
 
 fetch("spider-data.json")

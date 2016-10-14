@@ -9,12 +9,12 @@
     "name": "Barb",
     "price": 19.99,
     "image": "https://c1.staticflickr.com/3/2421/3822942380_53907aedf5_b.jpg",
-    "description": "Barbara is a troublemaker…"
+    "description": "Barbara is troublingly adorable…"
   },
   {
     "name": "Norm",
-    "price": 9.99,
+    "price": 1.99,
     "image": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Habronattus_coecatus_Kaldari_01.jpg",
-    "description": "Norm hangs around the bar a lot."
+    "description": "Norm is so adorable that I need a beverage."
   }
 ]
